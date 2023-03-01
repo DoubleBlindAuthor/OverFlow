@@ -1,6 +1,6 @@
 title: OverFlow
 description: OverFlow - Putting flows on top of neural transducers for better TTS
 show_downloads: False
-remote_theme: just-the-docs
+remote_theme: pages-themes/cayman@v0.2.0
 plugins:
 - jekyll-remote-theme # add this line to the plugins list if you already have one
