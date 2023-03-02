@@ -116,7 +116,7 @@ audio {
 
 ## Summary
 
-We propose a new approach, **OverFlow**, to address the shortcomings of [neural HMM TTS][Neural_HMM_link] (a type of transducer TTS) by adding flows over them. Having a stronger probabilistic model, we can now describe the highly non-Gaussian distribution of speech acoustics, obtaining better likelihoods and resulting in improvements in pronunciation and naturalness. We show that our model converges to lower word error rate (WER) faster and achieves higher naturalness scores than comparable methods. The resulting system:
+We propose a new approach, **OverFlow**, to address the shortcomings of [neural HMM TTS][Neural_HMM_link] (a type of transducer TTS) by adding flows over them. Having a stronger probabilistic model, we can now describe the highly non-Gaussian distribution of speech acoustics, obtaining better likelihoods, and resulting in improvements in pronunciation and naturalness. We show that our model converges to lower word error rate (WER) faster and achieves higher naturalness scores than comparable methods. The resulting system:
 * Quickly learns to speak and align
 * Is fully probabilistic
 * Can generate good-quality speech at many temperatures
@@ -166,7 +166,7 @@ Find reading boring? Try listening to the summary spoken by different voices:
 </table>
 
 
-## Architecture
+## Architecture overview
 <img src="images/model_architecture.png" alt="Architecture of OverFlow" width="650"/>
 
 
@@ -178,7 +178,7 @@ function playAudio(url) {
 <img src='images/play.png' onclick="playAudio('./audio/VOC/ListeningTest/1.wav')" />
 
 </script> -->
-## Stimuli from the listening tests
+## Stimuli from the listening test
 
 <span style="font-weight: bold">Dataset:</span> [LJ Speech][LJ_Speech_link] <br>
 <span style="font-weight: bold">Training data duration:</span> ~22.8 hours
@@ -984,7 +984,7 @@ We finetuned our model from the RyanSpeech 100k checkpoint on several English da
     <td class="tg-0pky">07508</td>
   </tr>
   <tr>
-    <th class="tg-fymr"># of finetuning iterations</th>
+    <th class="tg-fymr"># of finetuning updates</th>
     <td class="tg-0pky">5000</td>
     <td class="tg-0pky">5000</td>
     <td class="tg-0pky">5000</td>
@@ -1335,7 +1335,7 @@ We additionally trained VITS and FastPitch models, for 100k updates, with a sing
 
 ## Comparing GTTS to [pre-trained Glow-TTS (PT-GTTS)][coqui_tts_link]
 
-To compare the quality of our GTTS baseline (which uses official code from [Glow TTS Github link][official_glow_link]) to a reference Glow-TTS system, we have synthesised a number of utterances from a pre-trained Glow-TTS model, specifically the checkpoint available in [Coqui-TTS][coqui_tts_link] trained on [LJ Speech][LJ_Speech_link]. That model was trained with 330k updates using a batch size of 32.
+To compare the quality of our GTTS baseline (which uses the code from the [official Glow-TTS GitHub][official_glow_link]) to a reference Glow-TTS system, we have synthesised a number of utterances from a pre-trained Glow-TTS model, specifically the checkpoint available in [Coqui-TTS][coqui_tts_link] trained on [LJ Speech][LJ_Speech_link]. That model was trained for 330k updates using a batch size of 32.
 
 
 <table class="tg">
